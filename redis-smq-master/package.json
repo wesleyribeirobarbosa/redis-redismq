@@ -1,0 +1,75 @@
+{
+  "name": "redis-smq",
+  "version": "2.0.12",
+  "description": "A simple high-performance Redis message queue for Node.js.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "dependencies": {
+    "bunyan": "1.8.10",
+    "concurrently": "^6.0.2",
+    "cron-parser": "2.5.0",
+    "ioredis": "4.14.1",
+    "lodash": "4.17.20",
+    "neo-async": "2.6.2",
+    "redis": "2.8.0",
+    "redis-smq": "^2.0.12",
+    "redis-smq-monitor": "1.1.5",
+    "redlock": "4.1.0",
+    "uuid": "3.0.1"
+  },
+  "devDependencies": {
+    "bluebird": "3.7.1",
+    "eslint": "7.2.0",
+    "eslint-config-prettier": "6.12.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "prettier": "2.1.2",
+    "ts-node": "8.8.2",
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "lint": "eslint --ignore-path .jshintignore src/*.js",
+    "lint:fix": "eslint --ignore-path .jshintignore src/*.js --fix",
+    "start:monitor": "node ./mq/monitor.js",
+    "start:consumer1": "node ./mq/consumer/consumer1.js",
+    "start:consumer2": "node ./mq/consumer/consumer2.js",
+    "start:consumer3": "node ./mq/consumer/consumer3.js",
+    "start:consumer4": "node ./mq/consumer/consumer4.js",
+    "start:consumer5": "node ./mq/consumer/consumer5.js",
+    "start:consumer6": "node ./mq/consumer/consumer6.js",
+    "start:consumer7": "node ./mq/consumer/consumer7.js",
+    "start:consumer8": "node ./mq/consumer/consumer8.js",
+    "start:producer1": "node ./mq/producer/producer1.js",
+    "start:producer2": "node ./mq/producer/producer2.js",
+    "start:producer3": "node ./mq/producer/producer3.js",
+    "start:producer4": "node ./mq/producer/producer4.js",
+    "start:producer5": "node ./mq/producer/producer5.js",
+    "start:producer6": "node ./mq/producer/producer6.js",
+    "start:producer7": "node ./mq/producer/producer7.js",
+    "start:producer8": "node ./mq/producer/producer8.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "Weyoss <weyoss@protonmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "redis",
+    "message queue",
+    "message",
+    "queue",
+    "job queue",
+    "jobs",
+    "redis-smq"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weyoss/redis-smq.git"
+  },
+  "homepage": "https://github.com/weyoss/redis-smq",
+  "bugs": {
+    "url": "https://github.com/weyoss/redis-smq/issues"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=7.0.0"
+  }
+}
